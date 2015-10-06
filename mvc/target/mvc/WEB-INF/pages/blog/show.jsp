@@ -11,6 +11,10 @@
     <title></title>
 </head>
 <body>
-${name}
+${blogInfo.id}<br/>
+${blogInfo.title}<br/>
+${blogInfo.content}<br/>
+${blogInfo.relaseUser}<br/>
+${blogInfo.releaseTime}<br/>
 </body>
 </html>

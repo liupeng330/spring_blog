@@ -15,6 +15,11 @@ public class BlogImpl implements BlogService
     @Autowired
     BlogDao blogDao;
 
+    public Integer saveBlog(BlogEntity blog)
+    {
+        return (Integer)this.blogDao.save(blog);
+    }
+
     public Integer createBlog(String title, String content, Timestamp releaseTime, String releaseUser)
     {
         BlogEntity blogEntity = new BlogEntity();

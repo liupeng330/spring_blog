@@ -51,7 +51,11 @@
 
        <tx:annotation-driven transaction-manager="transactionManager"/>
 
-        <bean id="blogDao" class="pengliu.blog.dao.blog.BlogDao" />
-        <bean id="blogService" class="pengliu.blog.service.impl.BlogImpl" />
+        <context:component-scan base-package="pengliu.blog.dao" />
+        <context:component-scan base-package="pengliu.blog.service" />
+
+        <bean id="blogService" class="pengliu.blog.service.impl.BlogImpl">
+            <property name="needToMock" value="true"/>
+        </bean>
 
 </beans>
